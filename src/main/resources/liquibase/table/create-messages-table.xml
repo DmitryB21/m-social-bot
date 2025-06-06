@@ -28,7 +28,7 @@
         </createTable>
 
         <addForeignKeyConstraint
-                baseTableName="message"
+                baseTableName="messages"
                 baseColumnNames="user_id"
                 constraintName="FK_MESSAGES_USER"
                 referencedTableName="users"

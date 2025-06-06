@@ -7,8 +7,7 @@ import lombok.Setter;
 import java.time.Instant;
 
 @Entity
-@Getter
-@Setter
+@Table(name = "users")
 public class User {
 
     @Id
@@ -21,4 +20,27 @@ public class User {
     @Column(name = "last_message_at", nullable = false)
     private Instant lastMessageAt;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getChatId() {
+        return chatId;
+    }
+
+    public void setChatId(long chatId) {
+        this.chatId = chatId;
+    }
+
+    public Instant getLastMessageAt() {
+        return lastMessageAt;
+    }
+
+    public void setLastMessageAt(Instant lastMessageAt) {
+        this.lastMessageAt = lastMessageAt;
+    }
 }
